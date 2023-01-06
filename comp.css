@@ -1,0 +1,194 @@
+nav{
+    position:fixed;
+    top:0%;
+    left: 50.4px;
+    width:100%;
+    background-color: rgb(5, 134, 134);
+    padding: 0px;
+    z-index:4;
+}
+
+.ULnav{
+    list-style:none;
+    display: block;
+    width:max-content;
+    margin:1em auto;
+    padding-left: 0px;
+    z-index: 4;
+}
+
+.LInav{
+    display:inline;
+    border-radius: 2em;
+    background-color: aqua;
+    padding-left:1em; 
+    padding-right:1em; 
+    padding-top:0.3em; 
+    padding-bottom:0.3em;
+    z-index: 4;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+}
+
+body{
+    margin:0;
+    padding-bottom: 0px;
+    z-index: 0;
+}
+
+html{
+    background-color: rgb(201, 250, 234);
+}
+
+.tipoArticulo{
+    margin:3%;
+    padding:1em;
+    background: white;
+    text-decoration: none;
+    color:#444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-direction: column;
+    height: 625px;
+    width: 450px;
+    transition:all .1s ease-in;
+    border-radius: 1.5em;
+}
+
+h3{
+    text-align: center;
+}
+
+.descripcion{
+    text-align: center;
+    height: 75px;
+}
+
+.ImgTarjeta{
+    width: 100%;
+    height: 300px;
+    object-fit: scale-down;
+    border-top-left-radius: 1.5em ;
+    border-top-right-radius: 1.5em;
+}
+
+.logo1{
+    position:fixed;
+    top:0%;
+    height: 50.4px;
+    width: auto;
+    z-index: 3;
+    background-color: rgb(5, 134, 134);
+}
+
+.logo2{
+    position:relative;
+    bottom:0%;
+    height: 150px;
+    width: auto;
+    z-index: 3;
+}
+.ULfoot{
+    list-style:none;
+    display: flex;
+    float: right;
+    width:max-content;
+    margin:1em auto;
+    padding-left: 0px;
+}
+
+.secciones{
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width:98%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.ImgTarjetamini{
+    width: 100px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: scale-down;
+    border-radius: 1.5em;
+    background-color: rgb(146, 241, 209);
+    display: flex;
+    position: relative;
+    top:10px;
+    left:0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.tierTitle{
+    display: flex;
+    position: relative;
+    width: 80px;
+    top:5px;
+    justify-content: center;
+    padding: 0px;
+    margin: 10px auto;
+}
+
+.tier{
+    position: relative;
+    bottom: 0.3em;
+    left: 25px;
+    display: flex;
+    float: left;
+    justify-content: center;
+    width:400px;
+    z-index:1;
+}
+.tier2{
+    padding: 0px;
+    width: 120px;
+    height: 155px;
+    margin: 5px;
+    background-color: rgb(146, 241, 209);
+    border-radius: 1.5em;
+}
+footer{
+    position:relative;
+    bottom: 0px;
+    width: 100%;
+    background-color: black;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: ;
+}
+
+.ULfoot{
+    list-style:none;
+    display: block;
+    width:max-content;
+    margin:1em auto;
+    padding-left: 0px;
+    z-index: 4;
+}
+
+.LIfoot{
+    display:inline;
+    border-radius: 2em;
+    background-color: aqua;
+    padding-left:1em; 
+    padding-right:1em; 
+    padding-top:0.3em; 
+    padding-bottom:0.3em;
+    z-index: 4;
+}
+
+@media only screen and (min-width: 1075px){
+    .secciones{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
