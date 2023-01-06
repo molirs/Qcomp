@@ -38,6 +38,7 @@ body{
     margin:0;
     padding-bottom: 0px;
     z-index: 0;
+    height: fit-content;
 }
 
 html{
@@ -45,7 +46,7 @@ html{
 }
 
 .tipoArticulo{
-    margin:3%;
+    margin:0 auto;
     padding:1em;
     background: white;
     text-decoration: none;
@@ -87,24 +88,19 @@ h3{
 .logo2{
     position:relative;
     bottom:0%;
+    left: 0%;
     height: 150px;
     width: auto;
     z-index: 3;
 }
-.ULfoot{
-    list-style:none;
-    display: flex;
-    float: right;
-    width:max-content;
-    margin:1em auto;
-    padding-left: 0px;
-}
+
 
 .secciones{
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 60px;
+    margin-bottom: 10px;
     width:98%;
     display:grid;
     grid-template-columns: 1fr;
@@ -159,23 +155,30 @@ footer{
     position:relative;
     bottom: 0px;
     width: 100%;
-    background-color: black;
+    min-width: max-content;
+    display: flex;
+    background-color: rgb(5, 134, 134);
     padding-top: 7px;
     padding-bottom: 7px;
-    display: ;
+    align-items: center;
 }
 
 .ULfoot{
     list-style:none;
-    display: block;
-    width:max-content;
-    margin:1em auto;
+    display: grid;
+    width:auto;
+    margin-left:1em;
     padding-left: 0px;
-    z-index: 4;
+    gap: 0.5em;
+    grid-template-areas: 
+    "LI LI LI "
+    "LI LI LI "
+    ;
 }
 
 .LIfoot{
-    display:inline;
+    height: 50px;
+    text-align: center;
     border-radius: 2em;
     background-color: aqua;
     padding-left:1em; 
@@ -183,11 +186,21 @@ footer{
     padding-top:0.3em; 
     padding-bottom:0.3em;
     z-index: 4;
+    grid-area: "LI";
 }
+.LIfoot a{
+    display: flex;
+    margin: 0 auto;
+}
+
 
 @media only screen and (min-width: 1075px){
     .secciones{
         grid-template-columns: 1fr 1fr;
+    }
+    .ULfoot{
+        grid-template-areas: "LI LI LI LI LI LI";
+        margin:1em auto;
     }
 }
 
