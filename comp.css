@@ -10,7 +10,7 @@ nav{
 
 .ULnav{
     list-style:none;
-    display: block;
+    display: none;
     width:max-content;
     margin:1em auto;
     padding-left: 0px;
@@ -18,6 +18,25 @@ nav{
 }
 
 .LInav{
+    display:inline;
+    border-radius: 2em;
+    background-color: aqua;
+    padding-left:1em; 
+    padding-right:1em; 
+    padding-top:0.3em; 
+    padding-bottom:0.3em;
+    z-index: 4;
+}
+.ULnavmini{
+    list-style:none;
+    display: block;
+    width:max-content;
+    margin:1em auto;
+    padding-left: 0px;
+    z-index: 4;
+}
+
+.LInavmini{
     display:inline;
     border-radius: 2em;
     background-color: aqua;
@@ -171,9 +190,11 @@ footer{
     padding-left: 0px;
     gap: 0.5em;
     grid-template-areas: 
-    "LI LI LI "
-    "LI LI LI "
+    "LI"
+    "LI"
+    "LI"
     ;
+    grid-area: 2 / 5 / span 3 / span 2;
 }
 
 .LIfoot{
@@ -193,14 +214,42 @@ footer{
     margin: 0 auto;
 }
 
+.CV{
+    grid-area: 1 / 1 / span 1 / span 6;
+}
 
-@media only screen and (min-width: 1075px){
+.PG{
+    grid-area:2 / 1 / span 3 / span 4;
+    align-items: center;
+}
+.DEV{
+    grid-area: 5 / 1 / span 1 / span 6;
+}
+#PCc{
+    background-color: rgb(243, 167, 26);
+}
+#CM{
+    background-color: rgb(95, 94, 94);
+}
+#CsM{
+    background-color: rgb(178, 31, 31);
+}
+
+@media only screen and (min-width: 1005px){
     .secciones{
         grid-template-columns: 1fr 1fr;
     }
-    .ULfoot{
-        grid-template-areas: "LI LI LI LI LI LI";
+    .gridfoot{
+        width:max-content;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
         margin:1em auto;
+    }
+    .ULnavmini{
+        display: none;
+    }
+    .ULnav{
+        display: block;
     }
 }
 
