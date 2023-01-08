@@ -53,6 +53,12 @@ a{
     font-family: sans-serif;
 }
 
+.tarjetas{
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+}
+
 body{
     margin:0;
     padding-bottom: 0px;
@@ -162,6 +168,7 @@ h3{
     width:400px;
     z-index:1;
 }
+
 .tier2{
     padding: 0px;
     width: 120px;
@@ -170,6 +177,11 @@ h3{
     background-color: rgb(146, 241, 209);
     border-radius: 1.5em;
 }
+.tier2:hover{
+    top: -15px;
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
 footer{
     position:relative;
     bottom: 0px;
@@ -182,18 +194,8 @@ footer{
     align-items: center;
 }
 
-
-
 .LIfoot{
-    height: 50px;
-    text-align: center;
-    border-radius: 2em;
-    background-color: aqua;
-    padding-left:1em; 
-    padding-right:1em; 
-    padding-top:0.3em; 
-    padding-bottom:0.3em;
-    z-index: 4;
+
     grid-area: "LI";
 }
 .LIfoot a{
@@ -223,13 +225,13 @@ footer{
 }
 
 #PCc{
-    background-color: rgb(243, 167, 26);
+    background-color: none;
 }
 #CM{
-    background-color: rgb(95, 94, 94);
+    background-color: none;
 }
 #CsM{
-    background-color: rgb(178, 31, 31);
+    background-color: none;
 }
 .par{
     display: block;
@@ -239,10 +241,57 @@ footer{
 .ULfoot{
     display: none;
 }
+.logofoot{
+    border-radius: 1em;
+}
 .linkmini{
     height: 40px;
     width: auto;
+    padding-left: 15px;
 }
+.ULfootmini{
+    list-style:none;
+    display: grid;
+    width:auto;
+    margin: 1em auto;
+    padding-left: 0px;
+    gap: 0.5em;
+    grid-template-areas: 
+    "LI LI LI"
+    ;
+    grid-area: 2 / 6 / span 3 / span 2;
+}
+
+
+.CV{
+    background-color:rgb(146, 241, 209) ;
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+.CV:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+.LInavmini:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.LInav:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.LIfoot:hover{
+    box-shadow: 0px 0px 0px rgba(0,0,0,0);
+}
+/* EL FALLO DEL HOVER DEL FOOTER ESTA POR AQUI */
+.linkmini:hover{
+    box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+
+.gridfoot{
+    margin:1em auto;
+}
+
 @media only screen and (min-width: 1005px){
     .secciones{
         grid-template-columns: 1fr 1fr;
@@ -273,6 +322,35 @@ footer{
         ;
         grid-area: 2 / 6 / span 3 / span 2;
     }
+    #PCc{
+        background-color: rgb(243, 167, 26);
+    }
+    #CM{
+        background-color: rgb(95, 94, 94);
+    }
+    #CsM{
+        background-color: rgb(178, 31, 31);
+    }
+    .Ulfootmini{
+        display: none;
+    }
+    .LIfoot{
+        height: 50px;
+        text-align: center;
+        border-radius: 2em;
+        background-color: aqua;
+        padding-left:1em; 
+        padding-right:1em; 
+        padding-top:0.3em; 
+        padding-bottom:0.3em;
+        z-index: 4;
+        grid-area: "LI";
+    }
+
+    .LIfoot:hover{
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+    }
+
     .key{
         grid-area: 2 / 5 / span 3 / span 1;
         height: 220px;
@@ -295,7 +373,6 @@ footer{
     #CsManchor{
         padding-left: 27.5px;
     }
-    a.linkrecom:hover, a.linkrecom:active {color: rgb(111, 255, 0);}
     #miniUL{
         display: none;
     }
