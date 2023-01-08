@@ -182,20 +182,7 @@ footer{
     align-items: center;
 }
 
-.ULfoot{
-    list-style:none;
-    display: grid;
-    width:auto;
-    margin-left:1em;
-    padding-left: 0px;
-    gap: 0.5em;
-    grid-template-areas: 
-    "LI"
-    "LI"
-    "LI"
-    ;
-    grid-area: 2 / 5 / span 3 / span 2;
-}
+
 
 .LIfoot{
     height: 50px;
@@ -215,16 +202,26 @@ footer{
 }
 
 .CV{
-    grid-area: 1 / 1 / span 1 / span 6;
+    grid-area: 1 / 1 / span 1 / span 7;
 }
 
 .PG{
     grid-area:2 / 1 / span 3 / span 4;
     align-items: center;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
 }
 .DEV{
-    grid-area: 5 / 1 / span 1 / span 6;
+    grid-area: 5 / 1 / span 1 / span 7;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
 }
+.key{
+    display: none;
+}
+
 #PCc{
     background-color: rgb(243, 167, 26);
 }
@@ -234,7 +231,18 @@ footer{
 #CsM{
     background-color: rgb(178, 31, 31);
 }
-
+.par{
+    display: block;
+    padding: 1em auto;
+    text-align: center;
+}
+.ULfoot{
+    display: none;
+}
+.linkmini{
+    height: 40px;
+    width: auto;
+}
 @media only screen and (min-width: 1005px){
     .secciones{
         grid-template-columns: 1fr 1fr;
@@ -250,6 +258,46 @@ footer{
     }
     .ULnav{
         display: block;
+    }
+    .ULfoot{
+        list-style:none;
+        display: grid;
+        width:auto;
+        margin: 1em auto;
+        padding-left: 0px;
+        gap: 0.5em;
+        grid-template-areas: 
+        "LI"
+        "LI"
+        "LI"
+        ;
+        grid-area: 2 / 6 / span 3 / span 2;
+    }
+    .key{
+        grid-area: 2 / 5 / span 3 / span 1;
+        height: 220px;
+        width: auto;
+        padding-top: 3.5px;
+        display: block;
+    }
+    .par{
+        display: block;
+        padding-top: 88px;
+        text-align: center;
+    }
+    .linkrecom{
+        padding-top: 15px;
+        text-align: center;
+    }
+    #CManchor{
+        padding-left: 27.5px;
+    }
+    #CsManchor{
+        padding-left: 27.5px;
+    }
+    a.linkrecom:hover, a.linkrecom:active {color: rgb(111, 255, 0);}
+    #miniUL{
+        display: none;
     }
 }
 
