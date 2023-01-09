@@ -1,11 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
         <title>Solicitud de Trabajo</title>
         <link rel="icon" href="graficas/LOGO_png.png">
         <link rel="stylesheet" href="solicitudStyleSheet.css">
+        <link rel="icon" href="graficas/LOGO_png.png" sizes="25x25">
     </head>
     <body>
-        
+        <form action="" method="get"> <!-- Falta incluir el action que no estoy seguro de como funciona-->
+            <fieldset class="field1">
+                <legend>Datos Personales</legend>
+                <div class="divF1">
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" autofocus required>
+                </div>
+                <div class="divF1">
+                    <label for="surnames">Apellido/s:</label>
+                    <input type="text" name="surnames" required>
+                </div>
+                <div class="divF1">
+                    <label for="DNI">DNI</label>
+                    <input type="text" name="DNI" placeholder="ej:25414587X" required>
+                </div>
+                <div class="divF1">
+                    <label for="adult">Check si es ud. mayor de edad</label>
+                    <input type="checkbox" name="adult" id="adult" required>
+                </div>
+                <div class="divF1">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" placeholder="soyJesus@hotmail.es" required>
+                </div>
+                <div class="divF1">
+                    <label for="earnings">Salario previo (bruto mensual en €):</label>
+                    <input type="number" name="earnings" required>
+                </div>
+                <div class="divF1">
+                    <label for="tel">Número de Teléfono:</label>
+                    <input type="tel" name="tel" placeholder="ej: +34 654897987" required>
+                </div>
+                <div class="divF1">
+                    <label for="direccion">Direccion residencia:</label>
+                    <input type="text" name="direccion" placeholder="ej: Pintor marin Bagúes nº2 3ºB" required>
+                </div>
+            </fieldset>
+            <fieldset class="field2">
+                <legend>Aspiraciones Laborales</legend>
+                <label for="job" class="f2">Trabajo Solicitado:</label>
+                <select name="job" class="f2" required>
+                    <option value="FrontEND">Front end Developer</option>
+                    <option value="BackEND">Back end Developer</option>
+                    <option value="D_ADMIN">Data Base Administrator</option>
+                    <option value="hardware">Tecnico hardware</option>
+                    <option value="ofice">oficinista</option>
+                </select>
+                <label for="exp" class="f2">Experiencia en el sector solicitado:</label>
+                <textarea class="f2" name="exp" cols="60" rows="10" required></textarea>
+                <label for="objetivos" class="f2">Objetivo que te lleva a solicitar el puesto: </label>
+                <select name="objetivo" class="f2" required>
+                    <option value="fijo">Busco trabajo fijo</option>
+                    <option value="temp">Busco un puesto de trabajo temporal</option>
+                    <option value="summer">Busco cubrir bajas en verano</option>
+                    <option value="media_j">Busco trabajo media jornada</option>
+                    <option value="otro">otro</option>
+                </select>
+            </fieldset>
+            <div class="botones">
+                <input type="submit" value="Enviar" id="send">
+                <input type="reset" id="reset" value="Borrar todo">
+            </div>
+            <footer>
+                <a href="file:///C:/GRADO_SUPERIOR/L_MARCAS_SIS/Pagina_navidad/Componentes.html"><b>Vuelta a página principal Qcomp </b></a>
+                <p class="DEV"><b>Web Developer: Miguel Molina Querol</b></p>
+            </footer>
+        </form>
     </body>
 </html>
